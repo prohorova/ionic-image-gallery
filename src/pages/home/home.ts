@@ -16,9 +16,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,
               public authData: AuthData,
-              public loadingCtrl: LoadingController) {}
-
-  ionViewDidLoad() {
+              public loadingCtrl: LoadingController) {
     this.loading = this.loadingCtrl.create({
       dismissOnPageChange: true,
     });
