@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{label}}</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="close()">
+        Close
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <img [src]="image_url"/>
+</ion-content>

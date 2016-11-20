@@ -11,6 +11,7 @@ export class AuthData {
     this.fireAuth = firebase.auth(); // We are creating an auth reference.
     // This declares a database reference for the userProfile/ node.
     this.userProfile = firebase.database().ref('/userProfile');
+
   }
 
   /**

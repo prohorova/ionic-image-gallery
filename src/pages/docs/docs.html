@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Gallery</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="add()">
+        <ion-icon name="add"></ion-icon>
+        Add
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="docs && docs.length">
+
+    <ion-segment [(ngModel)]="layout" color="primary">
+      <ion-segment-button value="list" (ionSelect)="changeLayout('list')">
+        List
+      </ion-segment-button>
+      <ion-segment-button value="grid" (ionSelect)="changeLayout('grid')">
+        Grid
+      </ion-segment-button>
+    </ion-segment>
+    <ion-list *ngIf="showLayout('list')">
+      <ion-item *ngFor="let doc of docs" (click)="showImage(doc)">
+        <ion-thumbnail item-left>
+          <img [src]="doc.image_url">
+        </ion-thumbnail>
+        <p>{{doc.label}}</p>
+      </ion-item>
+    </ion-list>
+
+    <ion-grid *ngIf="showLayout('grid')">
+      <ion-row wrap>
+        <ion-col width-33 *ngFor="let doc of docs" (click)="showImage(doc)">
+          <img [src]="doc.image_url">
+          <p>{{label}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

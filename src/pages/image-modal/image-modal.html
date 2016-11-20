@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add image</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="close()">
+        Close
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div *ngIf="!image">
+    <button ion-button color="primary" block (click)="takePicture()">Take a new picture</button>
+    <button ion-button color="primary" block (click)="choosePicture()">Choose a picture</button>
+  </div>
+
+  <div *ngIf="image">
+    <img *ngIf="image" [src]="getImage()"/>
+    <ion-item>
+      <ion-label fixed>Enter label</ion-label>
+      <ion-input type="text" #labelInput [value]="label" (keyup)="label = labelInput.value"></ion-input>
+    </ion-item>
+    <div class="button-group">
+      <button ion-button color="primary" block (click)="save(label)" [disabled]="!label">Save</button>
+      <button ion-button color="primary" block clear (click)="delete()">Load another image</button>
+    </div>
+
+  </div>
+
+</ion-content>

@@ -18,11 +18,11 @@ export class MyApp {
   constructor(platform: Platform) {
 
     const config = {
-      apiKey: "AIzaSyALKfevapBOYK202f6k5mPPfMrT1MHDv5A",
-      authDomain: "bill-tracker-e5746.firebaseapp.com",
-      databaseURL: "https://bill-tracker-e5746.firebaseio.com",
-      storageBucket: "bill-tracker-e5746.appspot.com",
-      messagingSenderId: "508248799540"
+      apiKey: "AIzaSyDxKZSiqTu7Pgw0BNK-w_aP2JJhASJRqKA",
+      authDomain: "ionic-test-2e369.firebaseapp.com",
+      databaseURL: "https://ionic-test-2e369.firebaseio.com",
+      storageBucket: "ionic-test-2e369.appspot.com",
+      messagingSenderId: "719522226667"
     };
     firebase.initializeApp(config);
 

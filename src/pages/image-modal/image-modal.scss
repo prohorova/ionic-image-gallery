@@ -1,0 +1,20 @@
+page-image-modal {
+
+  ion-content {
+    text-align: center;
+  }
+
+  scroll-content {
+    overflow-y: auto;
+    padding-top: 40px;
+  }
+
+  img {
+    max-height: 200px;
+  }
+
+  .button-group {
+    margin-top: 10px;
+  }
+}
+

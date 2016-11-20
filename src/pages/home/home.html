@@ -1,15 +1,22 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Home
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  We'll be testing the log out button.
+<ion-content padding >
+  <div *ngIf="username">
+    <p>Hi {{username}}!</p>
 
-  <button ion-button color="positive" block (click)="logMeOut()">
-    Log Me Out Please
-  </button>
+    <button ion-button color="primary" block (click)="goToDocs()">
+      Go to gallery
+    </button>
+
+    <button ion-button color="primary" block clear (click)="logMeOut()"z>
+      Log Me Out Please
+    </button>
+  </div>
+
 </ion-content>

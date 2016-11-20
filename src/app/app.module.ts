@@ -7,6 +7,9 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
+import { DocsPage } from '../pages/docs/docs';
+import { ImageModalPage } from '../pages/image-modal/image-modal';
+import { ShowImageModalPage } from '../pages/show-image-modal/show-image-modal';
 
 // Import Providers
 import { AuthData } from '../providers/auth-data';
@@ -17,7 +20,10 @@ import { AuthData } from '../providers/auth-data';
     HomePage,
     LoginPage,
     SignupPage,
-    ResetPasswordPage
+    ResetPasswordPage,
+    DocsPage,
+    ImageModalPage,
+    ShowImageModalPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -28,7 +34,10 @@ import { AuthData } from '../providers/auth-data';
     HomePage,
     LoginPage,
     SignupPage,
-    ResetPasswordPage    
+    ResetPasswordPage,
+    DocsPage,
+    ImageModalPage,
+    ShowImageModalPage
   ],
   providers: [
     AuthData
