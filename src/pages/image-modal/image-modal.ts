@@ -54,7 +54,7 @@ export class ImageModalPage {
     let uploadTask = imgRef.putString(this.image, 'base64');
     uploadTask.on('state_changed',
       () => {},
-      this.handleError,
+      (err) =>  this.handleError(err),
       () => {
         let newImageRef = firebase.database().ref(`/userProfile/${this.userId}/gallery`).push();
         newImageRef.set({
@@ -72,7 +72,7 @@ export class ImageModalPage {
             }]
           });
           alert.present();
-        }, this.handleError)
+        }, (err) =>  this.handleError(err))
       });
   }
 
@@ -99,7 +99,7 @@ export class ImageModalPage {
     }).then((imageData) => {
       // imageData is a base64 encoded string
       this.image = imageData;
-    }, this.handleError);
+    }, (err) => this.handleError(err));
   }
 
 }
